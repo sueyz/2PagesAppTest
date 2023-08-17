@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_graph"
+    app:startDestination="@id/firstPage">
+
+    <fragment
+        android:id="@+id/firstPage"
+        android:name="com.example.a2pageapp.ui.FirstPage"
+        android:label="firstPage"
+        tools:layout="@layout/fragment_first_page">
+        <action
+            android:id="@+id/action_firstPage_to_secondPge"
+            app:destination="@id/secondPage" />
+        lastName<argument
+            android:name="firstName"
+            app:argType="string"
+            android:defaultValue=""/>
+        <argument
+            android:name="lastName"
+            app:argType="string"
+            android:defaultValue=""/>
+        <argument
+            android:name="email"
+            app:argType="string"
+            android:defaultValue=""/>
+        <argument
+            android:name="dob"
+            app:argType="string"
+            android:defaultValue=""/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/secondPage"
+        android:name="com.example.a2pageapp.ui.SecondPage"
+        android:label="secondPage"
+        tools:layout="@layout/fragment_second_page">
+        <action
+            android:id="@+id/action_secondPage_to_firstPage"
+            app:destination="@id/firstPage" />
+        <argument
+            android:name="firstName"
+            app:argType="string"
+            android:defaultValue=""/>
+        <argument
+            android:name="lastName"
+            app:argType="string"
+            android:defaultValue=""/>
+        <argument
+            android:name="email"
+            app:argType="string"
+            android:defaultValue=""/>
+        <argument
+            android:name="dob"
+            app:argType="string"
+            android:defaultValue=""/>
+    </fragment>
+
+</navigation>
